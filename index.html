@@ -1,979 +1,346 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>吴华友的博客</title>
-    <!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content=""/>
-    <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    } </script>
-    <!-- //for-mobile-apps -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <!-- js -->
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <!-- //js -->
-    <!-- fonts -->
-    <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-          rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Acme' rel='stylesheet' type='text/css'><!-- //fonts -->
+    <meta charset="UTF-8">
+    <title>Youga(友哥)</title>
 
-    <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+
+    <meta name="description" content="一只被程序边缘化的猿">
+    <meta name="keywords" content="Android，编程，全栈">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="cononico">
+    <meta name="application-name" content="Cononico">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/process.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
     <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-            });
-        });
+        //设定rem值
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 20 + 'px';
     </script>
-    <!-- start-smoth-scrolling -->
-
-    <!-- skills -->
-    <script src="js/pie-chart.js" type="text/javascript"></script>
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#demo-pie-1').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-2').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-3').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-4').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-        });
-    </script>
-    <!-- skills -->
-    <script type="text/javascript" src="js/numscroller-1.0.js"></script>
-
 </head>
 <body>
-<!-- banner -->
-<div class="header-top">
-    <div class="container">
-        <ul>
-            <li><a class="scroll" href="https://yougaking.github.io/"><span class="glyphicon glyphicon-file"
-                                                                            aria-hidden="true"></span>简历</a></li>
-            <li><a class="scroll" href="#emailme"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>联系我</a>
-            </li>
-            <li><a href="javascript:window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>打印简历</a>
-            </li>
-            <li><a href="#portfolioModal9" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
-                <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>我的照片</a></li>
-            <li><a href="http://my.oschina.net/u/2438532/blog">
-                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>我的博客</a></li>
-            <!--<li><a href="../index_en.html">English</a></li>-->
-        </ul>
+<header class="head">
+    <div class="head_logo_div">
+        <img class="logo_img" src="images/upload/head.jpg"></a>
     </div>
-</div>
-<div class="header">
-    <div class="container">
-        <div class="col-md-8 header-left">
-            <div class="col-sm-5 pro-pic">
-                <img class="img-responsive" src="images/pic1.png" alt=" "/>
-            </div>
-            <div class="col-sm-5 pro-text">
-                <h1>吴 华友</h1>
-                <p>西安菜瓜软件科技有限公司 Android开发</p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="col-md-4 header-right ">
-            <ul class="list-left">
-                <li>Email:</li>
-                <li>Google+:</li>
-                <li>Zhi Hu:</li>
-                <li>Address:</li>
+    <div class="head_nav_div">
+        <nav class="head_nav">
+            <ul id="nav_ul">
+                <li class="nav_li_on nav_ul_li">Home</li>
+                <li class="nav_ul_li">Skill</li>
+                <li class="nav_ul_li">Experience</li>
+                <li class="nav_ul_li">Achievement</li>
+                <li class="nav_ul_li">Contact</li>
             </ul>
-            <ul class="list-right">
-                <li><a href="mailto:YougaKingWu@gmail.com">YougaKingWu@gmail.com</a></li>
-                <li><a href="https://plus.google.com/u/0/104176746616096298725">@Youga友哥</a></li>
-                <li><a href="https://www.zhihu.com/people/wu-youga">吴Youga</a></li>
-                <li> 西安</li>
+        </nav>
+    </div>
+    <div class="clear"></div>
+</header>
+
+<ul class="float_btn" id="float_btn">
+    <li class="btn_on"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<div class="wrapBox" id="wrapBox">
+    <div class="box">
+        <img class="box_bg" src="images/upload/pic_1.jpg">
+        <div class="box01_content">
+            <div class="head_div">
+                <div class="cycle_item">
+                    <a href="https://github.com/YougaKing" class="github_a" id="github_a" target="_blank">
+                        <span class="github_icon"></span>
+                        <span class="github_text"><p class="item_name">GitHub</p></span>
+                    </a>
+                    <a href="https://www.zhihu.com/people/wu-youga" class="zhihu_a" id="zhihu_a" target="_blank">
+                        <span class="zhihu_icon"></span>
+                        <span class="zhihu_text"><p class="item_name">知乎</p> </span>
+                    </a>
+                    <a href="https://my.oschina.net/u/2438532/blog" class="blog_a" id="blog_a" target="_blank">
+                        <span class="blog_icon"></span>
+                        <span class="blog_text"><p class="item_name">博客</p></span>
+                    </a>
+
+                    <div class="green_cycle">
+                        <img class="green_cycle_img" src="images/icon/green_cycle.svg">
+                        <div class="yellow_cycle">
+                            <img class="yellow_cycle_img" src="images/icon/yellow_cycle.svg">
+                            <div class="blue_cycle">
+                                <img class="blue_cycle_img" src="images/icon/blue_cycle.svg">
+                                <div class="head_img_div">
+                                    <img class="head_img" src="images/upload/head.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="title">Youga</h1>
+            <h2 class="title_h2">我们都在阴沟里，但仍有人仰望星空</h2>
+            <div id="box01_text">
+                <p class="box01_p">已经输在了起跑线上.</p>
+                <p class="box01_p">只能当一个默默无闻的码农.</p>
+                <p class="box01_p">可惜人生不能再重来.</p>
+            </div>
+        </div>
+        <div class="arrow_div">
+            <img class="arrow_img" src="images/icon/arrowhead.png">
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="box_bg" src="images/upload/pic_2.jpg">
+
+        <div class="box02_content box_content">
+            <div id='bar_container' class="bar_container">
+                <div class='bar mint' data-percent='60' data-skill='Android'></div>
+                <div class='bar red' data-percent='40' data-skill='React Native'></div>
+                <div class='bar lila' data-percent='30' data-skill='JavaFX'></div>
+                <div class='bar gray' data-percent='30' data-skill='Java || C++'></div>
+                <div class='bar orange' data-percent='50' data-skill='Git || Svn'></div>
+                <div class="bar green" data-percent='25' data-skill='English'></div>
+            </div>
+            <div id="box02_text">
+                <h1>About Skill</h1>
+                <div class="overline"></div>
+                <p>2012,大学毕业</p>
+                <p>2014,迷迷茫茫在社会中挣扎</p>
+                <p>七月份开始学习Android</p>
+                <p>2015,年初的第一份工作</p>
+                <p>正式进入IT行业,一只到现在</p>
+                <p>第一年为了工作而工作</p>
+                <p>闲暇时捣鼓C++/JavaFX/React Native有的没得</p>
+                <p>现在不仅仅是工作</p>
+                <p>先做一名合格的Android开发者</p>
+                <p>而未来...</p>
+                <p>想成为一名全栈工程师</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="arrow_div">
+            <img class="arrow_img" src="images/icon/arrowhead.png">
+        </div>
+
+    </div>
+
+    <div class="box">
+        <img class="box_bg" src="images/upload/pic_3.jpg">
+
+        <div class="box_content box03_content">
+            <ul id="timeUl" class="timeUl">
+                <li>
+                    <div>
+                        <h1>2009-2012</h1>
+                        <p>芜湖职业技术学院</p>
+                        <p>专业:数控技术</p>
+                        <p>一个二批本科降为大专的院校(poi~)</p>
+                        <p>从未正确的找到英语教室
+                        <p>
+                        <p>荒废了的三年。。。</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h1>2014.7-2014-11</h1>
+                        <p>系统的学习Android开发</p>
+                        <p>1.Java基础</p>
+                        <p>2.Android入门</p>
+                        <p>最始的全篇的语法错误</p>
+                        <p>能开发很很简单Android应用</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h1>2015.1-Now</h1>
+                        <p>西安菜瓜软件科技有限公司</p>
+                        <p>Android开发</p>
+                        <p>从零开始的公司,成长了很多</p>
+                        <p>1.一个人全权开发随心所欲的乐趣</p>
+                        <p>2.丢失了一些团队合作的经验</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h1>Future</h1>
+
+                        <p>...</p>
+                    </div>
+                </li>
             </ul>
-            <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- //banner -->
-<!-- about -->
-<div id="about" class="about">
-    <div class="container">
-        <h3 class="tittle">关于我</h3>
-        <p class="abt-para">目前就职于西安菜瓜软件科技有限公司（简称菜瓜软件）,菜瓜软件是2015年1月4号正式成立,我也是2015年1月3号加入菜瓜软件,
-            这也是我进入IT行业的第一份工作,菜瓜软件从最开始的四人（CEO[兼产品经理],技术负责人[服务端],iOS开发人员,Android开发人员[That's me]）,
-            到现在的30多人。菜瓜软件成长了很多,我也成张了很多,我从最开始的只知道原始开发（网络请求自己封装的渣渣HttpClient,手动JsonObject、
-            JsonArray解析json,还有自己纯手写的渣渣图片缓存）,到现在不算熟练的运用一下主流框架（butterknife,dagger,
-            retrofit2,rxjava,rxlifecycle,glide）,以及为了自己方便写的渣渣开源库（加在更多的RecyclerView库[DragRecyclerView]、
-            选择图片和相机的库[ImageSelector]）,今后还有很长的路要走,目标在自己天赋之内做个Android大牛!</p>
-    </div>
-    <div class="col-md-6 abt-left ">
-        <h2>教育经历</h2>
-        <div class="accordion">
-            <div class="accordion-section">
-                <h5><a class="accordion-section-title" href="#accordion-2">
-                    <span>2009 - 2012</span> 芜湖职业技术学院
-                    <!--<i class="glyphicon glyphicon-chevron-down"></i>-->
-                    <!--<div class="clearfix"></div>-->
-                </a></h5>
-                <!--<div id="accordion-2" class="accordion-section-content">-->
-                <!--<h6>Seminars</h6>-->
-                <!--<ul>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">voluptatem-->
-                <!--accusantium</a></li>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">accusantium-->
-                <!--doloremque</a></li>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">doloremque-->
-                <!--laudantium</a></li>-->
-                <!--</ul>-->
-                <!--</div>-->
+            <div class="left_div" id="left_div">
+                <img class="left_arrow" src="images/icon/arrowleft.png">
             </div>
-
-            <div class="accordion-section">
-                <h5><a class="accordion-section-title" href="#accordion-3">
-                    <span>2006 - 2009</span> 紫阳中学
-                    <!--<i class="glyphicon glyphicon-chevron-down"></i>-->
-                    <!--<div class="clearfix"></div>-->
-                </a></h5>
-                <!--<div id="accordion-3" class="accordion-section-content">-->
-                <!--<h6>Competitions</h6>-->
-                <!--<ul>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">voluptatem-->
-                <!--accusantium</a></li>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">accusantium-->
-                <!--doloremque</a></li>-->
-                <!--<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">doloremque-->
-                <!--laudantium</a></li>-->
-                <!--</ul>-->
-                <!--</div>-->
+            <div class="right_div" id="right_div">
+                <img class="right_arrow" src="images/icon/arrowright.png">
             </div>
-
-
         </div>
-        <script>
-            jQuery(document).ready(function () {
-                function close_accordion_section() {
-                    jQuery('.accordion .accordion-section-title').removeClass('active');
-                    jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-                }
 
-                jQuery('.accordion-section-title').click(function (e) {
-                    // Grab current anchor value
-                    var currentAttrValue = jQuery(this).attr('href');
-
-                    if (jQuery(e.target).is('.active')) {
-                        close_accordion_section();
-                    } else {
-                        close_accordion_section();
-
-                        // Add active class to section title
-                        jQuery(this).addClass('active');
-                        // Open up the hidden content panel
-                        jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-                    }
-
-                    e.preventDefault();
-                });
-            });
-        </script>
+        <div class="arrow_div">
+            <img class="arrow_img" src="images/icon/arrowhead.png">
+        </div>
     </div>
-    <div class="col-md-6 abt-right ">
-        <div class="col-sm-4 abt-gd-left text-center">
-            <div id="demo-pie-1" class="pie-title-center" data-percent="25"><span class="pie-value"></span></div>
-            <h4>Java EE</h4>
-        </div>
 
-        <div class="col-sm-4 abt-gd-left text-center">
-            <div id="demo-pie-3" class="pie-title-center" data-percent="75"><span class="pie-value"></span></div>
-            <h4>Android</h4>
-        </div>
-        <div class="col-sm-4 abt-gd-left text-center">
-            <div id="demo-pie-4" class="pie-title-center" data-percent="15"><span class="pie-value"></span></div>
-            <h4>Material Design</h4>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- about -->
-<!-- education -->
-<div class="employment">
-    <div class="container">
-        <h3 class="tittle ">工作经历</h3>
-        <p class="abt-para ">目前就职于西安菜瓜软件科技有限公司
-            <br>这是我进入IT行业的第一份工作,一直到现在
-            <br>写了很多好玩的功能单一的App,也花了一些时间研究了一下Spring MVC + mybatis + Tomcat 搭建自己的服务器,Java FX
-            做了个读excle的桌面应用,用Visual Studio 也捣鼓了出来了一个Windows 桌面应用
-            <br>感觉浪费了一些时间研究乱七八糟的东西,今后主要专注于Java特性、Android以及React Native
-        </p>
-        <div class="col-md-6 employ-left">
-            <h4>菜瓜软件</h4>
-        </div>
-        <div class="col-md-6 employ-right">
-            <h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>app开发</h5>
-            <p>从0行代码开始,个人全权开发[影楼大管家],[结婚小秘书]前期,影楼全掌控,三秦全搜索,目前维护:影楼大管家专业版,影楼大管家普通版,三秦全搜索</p>
-        </div>
-        <div class="col-md-6 employ-left2">
-            <h5>影楼大管家<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></h5>
-            <p>单点登录,基于员工权限给予不同的操作模块,PC端对员工的通知以及员工对员工的消息缓存,考勤定位+拍照图片水印打卡,员工任务安排接受推送</p>
-        </div>
-        <div class="col-md-6 employ-right">
-            <h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>结婚小秘书</h5>
-            <p>客户的订单流程,实用小工具(婚姻登记处查询、喜帖制作分享、微相册制作分享) </p>
-        </div>
-        <div class="col-md-6 employ-left2">
-            <h5>影楼大管家<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></h5>
-            <p>jpush推送,dagger＋butterknife注入框架,ormlite数据库框架,retrofit2＋okhttp+gson网络请求数据解析框架,rxjava+
-                rxandroid+rxlifecycle框架,glide图片框架,amap高德地图定位服务,umeng应用统计</p>
-        </div>
-        <div class="col-md-6 employ-right">
-            <h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>结婚小秘书</h5>
-            <p>jpush推送,butterknife注入框架,greendao数据库框架,okhttp+gson网络请求数据解析框架,picasso图片框架,amap高德地图定位服务,umeng应用统计</p>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- education -->
-<!-- num scroller -->
-<div class="num-scroller">
-    <div class="container">
-        <h3 class="tittle ">成就</h3>
-        <div class="col-md-3 capabil-grid text-center">
 
-            <div class='numscroller numscroller-big-bottom' data-slno='0' data-min='0' data-max='5' data-delay='.1'
-                 data-increment="1">5
-            </div>
-            <p>Projects Done</p>
-        </div>
-        <div class="col-md-3 capabil-grid text-center">
+    <div class="box">
 
-            <div class='numscroller numscroller-big-bottom' data-slno='0' data-min='0' data-max='5' data-delay='.1'
-                 data-increment="1">5
-            </div>
-            <p>Testing</p>
-        </div>
-        <div class="col-md-3 capabil-grid text-center">
-
-            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0' data-delay='.5'
-                 data-increment="1">0
-            </div>
-            <p>Clients</p>
-        </div>
-        <div class="col-md-3 capabil-grid text-center">
-            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='99999' data-delay='.5'
-                 data-increment="100">99999
-            </div>
-            <p>Likes</p>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- //num scroller -->
-<!-- portfolio -->
-<div class="portfolio">
-    <div class="container">
-        <h3 class="tittle ">代表作品</h3>
-        <div class="portfolio-grids">
-            <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $('#horizontalTab').easyResponsiveTabs({
-                        type: 'default', //Types: default, vertical, accordion
-                        width: 'auto', //auto or any width like 600px
-                        fit: true   // 100% fit in a container
-                    });
-                });
-
-            </script>
-            <div class="sap_tabs">
-                <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                    <ul class="resp-tabs-list">
-                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>All</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Web Design</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Graphic Design</span></li>
-                    </ul>
-                    <div class="resp-tabs-container">
-                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal1" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic4.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal3" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic5.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic9.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic6.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd yes_marg ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic10.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd yes_marg ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic11.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd yes_marg ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic13.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd yes_marg ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal8" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic14.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
+        <img class="box_bg" src="images/upload/pic_4.jpg">
+        <div class="box_content box04_content">
+            <h1 class="box04_title">Some Achievements</h1>
+            <ul class="hobby_content">
+                <li class="hobby_01">
+                    <div class="hobby_img_div">
+                        <div class="spinner spinner_01"></div>
+                        <div class="hobby_img">
+                            <img src="images/upload/kapok.jpg">
                         </div>
-                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic10.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd  ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic11.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic13.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic9.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd ">
-                                <div class="thumb">
-                                    <a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic6.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd">
-                                <div class="thumb">
-                                    <a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic10.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 team-gd">
-                                <div class="thumb">
-                                    <a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go"
-                                       data-toggle="modal"><img src="images/pic11.png" alt="">
-                                        <div class="team_pos">
-                                            <ul>
-                                                <li>
-                                                    <div class="morph pic fb_icon1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
+                        <div class="hobby_img_info">
+                            <h1>APPS</h1>
+                            <h2>影楼大管家&结婚小秘书</h2>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //portfolio -->
-<!-- more skills -->
-<div class="more">
-    <div class="container">
-        <h3 class="tittle ">技能</h3>
-        <div class="col-md-6 skill-left ">
-            <div class="progress">
-                <div class="progress-bar progress-bar-success" style="width: 30%">Android
-                    <span class="sr-only">35% Complete (success)</span>
-                </div>
-                <div class="progress-bar progress-bar-warning " style="width: 40%">
-                    <span class="sr-only"></span>
-                </div>
-                <p>70%</p>
-                <div class="clearfix"></div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-success1" style="width: 30%">JAVA EE
-                    <span class="sr-only">35% Complete (success)</span>
-                </div>
-                <div class="progress-bar progress-bar-warning1" style="width: 20%">
-                    <span class="sr-only"></span>
-                </div>
-                <p>50%</p>
-                <div class="clearfix"></div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-success3" style="width: 30%">Material Design
-                    <span class="sr-only">35% Complete (success)</span>
-                </div>
-                <div class="progress-bar progress-bar-warning3 " style="width: 55%">
-                    <span class="sr-only"></span>
-                </div>
-                <p>85%</p>
-                <div class="clearfix"></div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-success2" style="width: 30%">C#
-                    <span class="sr-only">35% Complete (success)</span>
-                </div>
-                <div class="progress-bar progress-bar-warning2" style="width: 55%">
-                    <span class="sr-only"></span>
-                </div>
-                <p>85%</p>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="progress no-marg">
-                <div class="progress-bar progress-bar-success4" style="width: 30%">Java FX
-                    <span class="sr-only">35% Complete (success)</span>
-                </div>
-                <div class="progress-bar progress-bar-warning4" style="width: 40%">
-                    <span class="sr-only"></span>
-                </div>
-                <p>70%</p>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="col-md-6 skill-right ">
-            <div class="scrollbar scrollbar1">
-                <div class="more-gds">
-                    <div class="col-sm-3 more-left">
-                        <span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-sm-9 more-right">
-                        <h4>Clean Design</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error
-                            sit voluptatem accusantium doloremque laudantium,
-                            totam rem .</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="more-gds yes_marg">
-                    <div class="col-sm-9 more-right2">
-                        <h4>Mobile Applications</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error
-                            sit voluptatem accusantium doloremque laudantium,
-                            totam rem .</p>
-                    </div>
-                    <div class="col-sm-3 more-left">
-                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="more-gds yes_marg">
-                    <div class="col-sm-3 more-left">
-                        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-sm-9 more-right">
-                        <h4>Support</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error
-                            sit voluptatem accusantium doloremque laudantium,
-                            totam rem .</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="more-gds yes_marg">
-                    <div class="col-sm-9 more-right2">
-                        <h4>Marketing</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error
-                            sit voluptatem accusantium doloremque laudantium,
-                            totam rem .</p>
-                    </div>
-                    <div class="col-sm-3 more-left">
-                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- more skills -->
-<!-- contact -->
-<div id="emailme" class="contact">
-    <div class="container">
-        <h3 class="tittle">联系方式</h3>
-        <div class="col-md-6 contact-left ">
-            <div class="horizontal-tab">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="false">联系我</a></li>
-                    <li class=""><a href="#tab2" data-toggle="tab" aria-expanded="false">聘用我</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active in" id="tab1">
-                        <div class="contact-form">
-                            <ul>
-                                <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>西安市,
-                                    莲湖区, <span>西安.</span></li>
-                                <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
-                                        href="mailto:YougaKingWu@gmail.com">YougaKingWu@gmail.com</a></li>
-                                <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+187****1065</li>
-                            </ul>
-                            <form>
-                                <input type="text" value="Name" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                                <input type="email" value="Email" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                                <textarea type="text" onfocus="this.value = '';"
-                                          onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                                <input type="submit" value="Submit">
-                            </form>
+                    <div class="hobby_text_div">
+                        <div class="hobby_img_info_mob">
+                            <h1>影楼大管家/<a>结婚小秘书</a></h1>
                         </div>
-
+                        <p class="about_p">
+                            两个成熟的应用,单个用户量将近十万,应用功能多而杂,基本包含了商城,ERP管理类似的功能.
+                        </p>
+                        <p>
+                            需求和设计也不是很明确,应用架构也没有精雕细琢,标准的小公司的产品,一个Android端开发出来的产品,
+                            也许并不是用户想要的<a href="http://www.wandoujia.com/apps/com.liyuan.youga.marrysecretary"
+                                         target="_blank">
+                        </a>
+                        </p>
                     </div>
-                    <div class="tab-pane" id="tab2">
-                        <div class="contact-form">
-                            <form>
-                                <input type="text" value="Name" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                                <input type="email" value="Email" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                                <textarea type="text" onfocus="this.value = '';"
-                                          onblur="if (this.value == '') {this.value = 'Message...';}" required="">Description...</textarea>
-                                <input id="uploadFile" placeholder="Choose File" disabled="disabled"/>
-                                <div class="fileUpload btn btn-primary">
-                                    <span>Upload</span>
-                                    <input id="uploadBtn" type="file" class="upload"/>
-                                </div>
-                                <input type="submit" value="Send Request">
-                            </form>
-                            <script>
-                                document.getElementById("uploadBtn").onchange = function () {
-                                    document.getElementById("uploadFile").value = this.value;
-                                };
-                            </script>
+                </li>
+                <li class="hobby_02">
+                    <div class="hobby_img_div">
+                        <div class="spinner spinner_02"></div>
+                        <div class="hobby_img">
+                            <img src="images/upload/acg.png">
+                        </div>
+                        <div class="hobby_img_info">
+                            <h1>LIBRARY</h1>
+                            <h2>Open&Source</h2>
                         </div>
                     </div>
+                    <div class="hobby_text_div">
+                        <div class="hobby_img_info_mob">
+                            <h1>DragRecyclerView/<a>ImageSelector</a></h1>
+                        </div>
+                        <p class="about_p">
+                            <a href="https://github.com/YougaKing/DragRecyclerView"
+                               target="_blank">
+                                [DragRecyclerView]</a>Recycler View加载更多,可搭配Swipe Refresh Layout下拉刷新,
+                            支持EmptyView loading error 图片文字可自定义,支持多Layout Manager
+                        </p>
+                        <p>
+                            <a href="https://github.com/YougaKing/DragRecyclerView"
+                               target="_blank">
+                                [ImageSelector]</a>选择图片/打开相机,适配6.0权限和7.0严苛模式,
+                            支持圆头像裁剪,大图预览
+                        </p>
+                    </div>
+                </li>
+                <li class="hobby_03">
+                    <div class="hobby_img_div">
+                        <div class="spinner spinner_03"></div>
+                        <div class="hobby_img">
+                            <img src="images/upload/reading.jpg">
+                        </div>
+                        <div class="hobby_img_info">
+                            <h1>BLOG</h1>
+                            <h2>编码&写作</h2>
+                        </div>
+                    </div>
+                    <div class="hobby_text_div">
+                        <div class="hobby_img_info_mob">
+                            <h1>编码/<a>写作</a></h1>
+                        </div>
+                        <p class="about_p">
+                            总结一些工作中的知识,分享给更多需要的人,努力提高自己,在自己天赋之内做个大牛.
+                        </p>
+                        <p>
+                            详解相机拍照获取图片<a href="https://my.oschina.net/u/2438532/blog/743160"
+                                        target="_blank">
+                            android调用系统相机拍照</a>,详解农历数据,公农历转换<a href="https://my.oschina.net/u/2438532/blog/759596"
+                                                 target="_blank">
+                            农历的那些事儿</a>,就是毅力不够,仍需磨砺.
+                        </p>
+                    </div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="arrow_div">
+            <img class="arrow_img" src="images/icon/arrowhead.png">
+        </div>
+    </div>
 
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <p class="copy-right">Copyright &copy; 2016.YougaKing All rights reserved.<a target="_blank"
-                                                                                     href="https://yougaking.github.io/">yougaking
-            &nbsp; </a>
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cspan id='cnzz_stat_icon_1259245065'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259245065' type='text/javascript'%3E%3C/script%3E"));</script>
-        </p>
-    </div>
-</div>
-<!-- //contact -->
-<!-- for bootstrap working -->
-<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic4.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic9.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic5.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic6.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic10.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic11.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic13.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <h3>Image-Title</h3>
-                        <img src="images/pic14.png" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-                        <img src="images/pic1.png" class="img-responsive img-centered" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--scrolling js-->
-<script src="js/jquery.nicescroll.js"></script>
-<script src="js/scripts.js"></script>
-<!--//scrolling js-->
-<!-- smooth scrolling -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        /*
-         var defaults = {
-         containerID: 'toTop', // fading element id
-         containerHoverID: 'toTopHover', // fading element hover id
-         scrollSpeed: 1200,
-         easingType: 'linear'
-         };
-         */
-        $().UItoTop({easingType: 'easeOutQuart'});
-    });
-</script>
-<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
+    <foot id="foot" class="foot">
+        <h1 class="foot_title">Contact With Me</h1>
+        <div class="foot_info_main">
+            <ul>
+                <li class="github_items">
+                    <a href="https://github.com/YougaKing" target="_blank">GitHub</a>
+                </li>
+                <li class="google_items">
+                    <a href="https://plus.google.com/104176746616096298725" target="_blank">Google+</a>
 
+                </li>
+                <li class="twitter_items">
+                    <a href="https://twitter.com/YougaKingWu" target="_blank">Twitter</a>
+
+                </li>
+                <li class="facebook_items">
+                    <a href="https://www.facebook.com/yougakingwu" target="_blank">FaceBook</a>
+
+                </li>
+                <li class="linkedin_items">
+                    <a href="http://www.linkedin.com/in/%E5%8D%8E%E5%8F%8B-%E5%90%B4-110306121" target="_blank">领英</a>
+
+                </li>
+                <li class="zhihu_items">
+                    <a href="https://www.zhihu.com/people/wu-youga" target="_blank">知乎</a>
+
+                </li>
+                <li class="blog_items">
+                    <a href="https://my.oschina.net/u/2438532/blog" target="_blank">博客</a>
+                </li>
+                <li class="email_items">
+                    <a href="mailto:yougakingwu@gmail.com" target="_blank">邮箱</a>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <div class="qrcode_div">
+                    <span class="weixin">
+                        <a class="weixin_icon"></a>
+                        <img class="weixin_img" src="images/upload/weixin_qr.png">
+                    </span>
+                <!--<span class="dingding">-->
+                <!--<a class="dingding_icon"></a>-->
+                <!--<img class="dingding_img" src="images/upload/dingding_qr.png">-->
+                <!--</span>-->
+                    <span class="qq">
+                        <a class="qq_icon"></a>
+                        <img class="qq_img" src="images/upload/qq_qr.jpg">
+                    </span>
+            </div>
+        </div>
+    </foot>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>
 
+ 
